@@ -1,0 +1,17 @@
+<div class="container mt-3 px-3">
+<div class="container mt-3 px-3">
+  <div class="row">
+    <div class="col-12">
+    <h1> All our Flats </h1>
+    </div>
+    <div class="row">
+      <h4> All <%= Flat.count %> flats</h4>
+    </div>
+    <div class="row">
+      <% @flats.each do |flat| %>
+        <%= render 'card_flat', flat: flat %>
+        <% end %>
+  </div>
+  </div>
+</div>
+</div>
