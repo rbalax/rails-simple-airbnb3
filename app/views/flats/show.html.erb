@@ -1,34 +1,59 @@
-<div class="container">
-  <div class="card col-sm-6 col-md-3 col-lg-3">
-    <img class="card-img-top" src="https://images.unsplash.com/photo-1494526585095-c41746248156?w=1200" alt="Card image cap">
-    <div class="flat-card-content" style="background-color: rgb(248,249,250);">
-      <div class="card-body">
-        <p class="card-text"><%= @flat.name %></p>
-        <p class="card-text"><%= @flat.address %></p>
-        <i class="fa-solid fa-people-line ml-3"><span><%= @flat.number_of_guests %></span></i>
-        <i class="fas fa-euro-sign ml-3"><span><%= @flat.price_per_night %></span></i>
-      </div>
-    </div>
-      <div class="flat-card-actions">
-        <button type="button" class="btn btn-link text-primary">More info</button>
-        <button type="button" class="btn btn-link text-warning">Edit</button>
-        <button type="button" class="btn btn-link text-danger">Remove</button>
-      </div>
-  </div>
+
+<div class="map" style="background-image: url('https://images.unsplash.com/photo-1494526585095-c41746248156?w=1200'); height: 300px; width: 100%; background-size: cover;">
+
+</div>
+<div class="map" style="background-image: url('https://images.unsplash.com/photo-1494526585095-c41746248156?w=1200'); height: 300px; width: 100%; background-size: cover;">
 </div>
 
-<h1>BELOW TRIALS OF LAYOUT</h1>
 <div class="container">
   <div class="row">
-    <div class="col-sm">
-      One of three columns
-    </div>
-    <div class="col-sm">
-      One of three columns
-    </div>
-    <div class="col-sm">
-      One of three columns
+    <div class="col">
+      <div class="flat-show-card">
+        <%= @flat.address %>
+      </div>
+      <div class="flat-show-card">
+        <%= @flat.description %>
+      </div>
     </div>
 
+    <div class="col">
+      <div class="flat-show-card">
+        <h5>Book this place!</h5>
+      <form>
+        <div class="form-group">
+          <label for="booking-from">Booking From:</label>
+          <input type="date" class="form-control mt-2" id="booking-from">
+        </div>
+        <div class="form-group">
+          <label for="booking-to">Booking To:</label>
+          <input type="date" class="form-control mt-2" id="booking-to">
+        </div>
+          <button type="submit" class="btn btn-primary mt-2">Submit</button>
+        </form>
+      </div>
+
+      <div class="flat-show-card">
+        <h3>Details</h3>
+        <div class="d-inline-flex ">
+          <div class="flex"><%= @flat.number_of_guests %> people</div>
+          <div class="flex ms-3"><i class="fa-solid fa-euro-sign"></i><%= @flat.price_per_night %></div>
+        </div>
+      </div>
+      <div class="flat-show-card">
+        <div class="d-flex justify-content-between">
+        <div>
+          <h6 class="no-mb">Share:</h6>
+          </div>
+        <div class="flex">
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-linkedin"></i>
+        </div>
+        </div>
+      </div>
+    </div>
   </div>
+</div>
+</div>
+</div>
 </div>
